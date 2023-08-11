@@ -1,18 +1,19 @@
 <?php
 
 namespace App\Libraries\Core;
-use App\Libraries\Core\Response;
+use App\Libraries\Core\Request;
 
-class Controller{
+class Controller extends Request{
 
-    function __Construct(){
-
+    function __construct(){
+        parent::__construct();
+        $this->load();
     }
 
-    function load($controller, $method){
+    function load(){
+        $controller = $this->getController();
         $file = __DIR__ ."/../../Models/{$controller}.php";
         $class = "App\\Models\\{$controller}";
-        $method = $method;
         if(file_exists($file)){
             if(class_exists($class)){
                 include_once $file;

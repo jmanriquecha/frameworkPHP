@@ -15,10 +15,6 @@ class Response{
                 if(method_exists($classController, $method)){
                     $params = $params ? explode(",", $params) : '';
                     $classController->{$method}($params);
-                    
-                    //Enviamos datos al controlador
-                    $class = new Controller;
-                    $class->load($controller, $method);
                 }
                 else{
                     echo "El metodo {$method} NO existe en el controlador {$this->controller}";
