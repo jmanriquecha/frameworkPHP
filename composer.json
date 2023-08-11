@@ -1,0 +1,22 @@
+{
+    "name": "jmanrique/tasks",
+    "description": "Administrador de tareas",
+    "type": "no",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Jorge Manrique",
+            "email": "georgemanc.28@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
